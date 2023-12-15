@@ -1,0 +1,122 @@
+.img-hover {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+    text-align: left !important;
+    font-size: 16px;
+    background: #000000e8 !important;
+}
+
+.img-hover *,
+.img-hover:before,
+.img-hover:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.img-hover img {
+    max-width: 100%;
+    backface-visibility: hidden;
+    vertical-align: top;
+}
+
+.img-hover:before,
+.img-hover:after {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    content: '';
+    background-color: #fff;
+    z-index: 1;
+    opacity: 0;
+}
+
+.img-hover:before {
+    width: 0;
+    height: 1px;
+}
+
+.img-hover:after {
+    height: 0;
+    width: 1px;
+}
+
+.img-hover .text-hover {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 20px;
+}
+
+.img-hover h3,
+.img-hover h4 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: normal;
+    opacity: 0;
+    color: #fff;
+}
+
+.img-hover h4 {
+    font-size: .8em;
+    text-transform: uppercase;
+}
+
+.img-hover a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.img-hover:hover img,
+.img-hover.hover img {
+    zoom: 1;
+    filter: alpha(opacity=20);
+    -webkit-opacity: 0.2;
+    opacity: 0.2;
+}
+
+.img-hover:hover:before,
+.img-hover.hover:before,
+.img-hover:hover:after,
+.img-hover.hover:after {
+    opacity: 1;
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+}
+
+.img-hover:hover:before,
+.img-hover.hover:before {
+    width: 40px;
+}
+
+.img-hover:hover:after,
+.img-hover.hover:after {
+    height: 40px;
+}
+
+.img-hover:hover h3,
+.img-hover.hover h3,
+.img-hover:hover h4,
+.img-hover.hover h4 {
+    opacity: 1;
+}
+
+.img-hover:hover h3,
+.img-hover.hover h3 {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.img-hover:hover h4,
+.img-hover.hover h4 {
+    -webkit-transition-delay: 0.35s;
+    transition-delay: 0.35s;
+}

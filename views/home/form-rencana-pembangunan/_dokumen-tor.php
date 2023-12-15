@@ -1,0 +1,1 @@
+<embed class="mt-3 mb-3" type="application/pdf" src="<?= Yii::$app->formatter->asFileLink($model->dokumen_tor) ?>" width="100%" height="500px" aria-hidden="true"></i></embed>

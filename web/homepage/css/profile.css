@@ -1,0 +1,9 @@
+.border-profile {
+    border-right: solid 1px;
+}
+
+@media (max-width: 768px) {
+    .border-profile {
+        border-right: solid 0px;
+    }
+}

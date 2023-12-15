@@ -1,0 +1,6 @@
+!.gitignore
+uploads/*
+!assets
+!uploads/logo.png
+!uploads/default.png
+!uploads/login_bg.png

@@ -1,0 +1,138 @@
+/* Relative positioning*/
+
+#image-map {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Hide the original tooltips contents */
+
+.pin {
+    display: none;
+}
+
+
+/* Begin styling the tooltips and pins */
+
+.tooltip2-up,
+.tooltip2-down {
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus-circle' class='svg-inline--fa fa-plus-circle fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='yellow' d='M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    width: 3%;
+    height: 3%;
+    transform: translate(-50%, -50%);
+}
+
+.tooltip2-down {
+    /* background-position: 0 -37px; */
+}
+
+.tooltip2 {
+    display: none;
+    width: 200px;
+    cursor: help;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 999;
+    margin-left: 0px;
+    padding: 5px;
+    color: #222;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.7);
+    background: #fff;
+    /* background: linear-gradient(top, #fff1d3, #ffdb90); */
+}
+
+.tooltip2-right {
+    right: 50% !important;
+    left: auto;
+    /* background: linear-gradient(top, #fff1d3, #ffdb90); */
+}
+
+.tooltip2::after {
+    /* content: ""; */
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    border-bottom: 10px solid #fff1d3;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.tooltip2-down .tooltip2 {
+    bottom: 12px;
+    top: auto;
+}
+
+.tooltip2-down .tooltip2::after {
+    bottom: -10px;
+    top: auto;
+    border-bottom: 0;
+    border-top: 10px solid #ffdb90;
+}
+
+.tooltip2 h2 {
+    font: bold 1.3em "Trebuchet MS", Tahoma, Arial;
+    margin: 0 0 10px;
+}
+
+.tooltip2 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.image-content {
+    height: 200px;
+    position: static;
+    width: 100%;
+    background-size: cover;
+}
+
+.map-height {
+    min-height: 800px!important;
+}
+
+@media only screen and (max-width: 1200px) {
+    .map-height {
+        min-height: 450px!important;
+    }
+}
+
+
+/* responsive for mobile devices */
+
+@media only screen and (max-width: 480px) {
+    .map-height {
+        min-height: 170px!important;
+    }
+    #image-map {
+        max-width: 100%;
+        height: auto;
+    }
+    .tooltip2 {
+        width: 100px;
+        height: auto;
+        margin-left: 0px;
+    }
+    .image-content {
+        height: 60px;
+    }
+    .tooltip2::after {
+        display: none;
+    }
+    .price-font {
+        font-size: .6rem;
+    }
+    .tooltip2-up,
+    .tooltip2-down {
+        width: 5%;
+        height: 5%;
+    }
+}
